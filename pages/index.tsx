@@ -1,7 +1,4 @@
-const Index = () => (
-  <div>
-    <p>Hello Next.js</p>
-  </div>
-)
+import Form from '../src/ui/Form';
+const Index = () => (<Form />)
 
 export default Index;

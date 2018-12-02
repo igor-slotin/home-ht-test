@@ -10,11 +10,11 @@ export interface IRouteConfig {
   [key: string]: IRoute;
 }
 const _routeConfig = [
-//  {
-//     name: 'index',
-//     page: '/',
-//     pattern: '/'
-//   }
+ {
+    name: 'results',
+    page: '/result',
+    pattern: '/results'
+  }
 ];
 
 export const routeConfig: IRouteConfig = keyBy(_routeConfig, 'name');
