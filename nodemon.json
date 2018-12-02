@@ -1,0 +1,6 @@
+{
+  "watch": ["server.ts", "src/**/*.tsx", "src/**/*.css"],
+  "execMap": {
+    "ts": "node --inspect=7000 ./node_modules/.bin/ts-node --compilerOptions '{\"module\":\"commonjs\"}'"
+  }
+}

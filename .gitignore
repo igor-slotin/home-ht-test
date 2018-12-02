@@ -1,0 +1,14 @@
+node_modules
+.idea
+.envrc.local
+yarn-error.log
+.cache
+dist
+.next
+src/**/*.jsx
+src/**/*.js
+src/**/*.map
+pages/**/*.jsx
+pages/**/*.js
+pages/**/*.map
+out/
