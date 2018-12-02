@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form test Should match snapshot 1`] = `
+.c2 {
+  font-size: 16px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-weight: normal;
+  -webkit-letter-spacing: 0.02em;
+  -moz-letter-spacing: 0.02em;
+  -ms-letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  color: #f1f1f1;
+  border: none;
+  background: #FD3B1A center;
+  height: auto;
+  min-height: 52px;
+  min-width: 205px;
+  width: 100%;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+.c2:not(:disabled) {
+  outline: none;
+  box-shadow: none;
+}
+
+.c2:hover,
+.c2:active {
+  color: #ffffff;
+  background: #FD3B1A;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+.c2:hover .icon-right-chevron:before,
+.c2:active .icon-right-chevron:before,
+.c2:hover .icon-left-chevron:before,
+.c2:active .icon-left-chevron:before {
+  color: #ffffff;
+}
+
+.c2:focus,
+.c2:active:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.c2:focus .icon-right-chevron:before,
+.c2:active:focus .icon-right-chevron:before {
+  color: #ffffff;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: calc(100% - 20px);
+}
+
+.c1 {
+  padding: 10px;
+  font-size: 16px;
+  min-width: 205px;
+  border: 1px solid #DDDDDD;
+  margin: 20px 0;
+}
+
+@media (max-width:700px) {
+  .c2 {
+    height: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:700px) {
+  .c1 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+<form
+  action="javascript:void(0);"
+  className="c0"
+  onSubmit={[Function]}
+>
+  <input
+    className="c1"
+  />
+  <button
+    className="c2"
+    type="submit"
+  >
+    Next step
+  </button>
+</form>
+`;

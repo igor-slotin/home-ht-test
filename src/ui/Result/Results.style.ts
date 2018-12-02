@@ -13,6 +13,14 @@ export const Container = styled.section`
 
 export const ContentWrapper = styled(Container)`
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: calc(100% - 20px);
+`
+
+export const ListItem = styled.li`
+  list-style-type: none;
+`
+
+export const ButtonWrapper = styled.section`
+  width: 100%
 `

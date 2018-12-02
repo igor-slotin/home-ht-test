@@ -14,7 +14,7 @@ export default class PhoneNumberTabView extends Component {
         <Label>
           Put your phone number
         </Label>
-        <Input type="phone" 
+        <Input type="tel" 
           name="phoneNumber" 
           value={Store.phoneNumber} 
           onChange={Store.handleParamChanged(Tabs.phoneNumber)}/>

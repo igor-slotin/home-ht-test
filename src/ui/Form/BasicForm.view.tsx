@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react'
 
-import { Progress } from 'react-sweet-progress';
-import "react-sweet-progress/lib/style.css";
-
 import Store from '../../store/CollectedDataStore';
 
 import { 
   Container,
-  ContentWrapper
+  ContentWrapper,
+  ProgressBar
 } from './BasicForm.style'
 
 
 @observer
 export default class BasicFormView extends Component {
+  componentDidMount() {
+    Store.resetStep();
+  }
   renderCurrentTab = () => {
     const CurrentTab = Store.currentTab.component;
     return CurrentTab && <CurrentTab />
@@ -21,7 +22,7 @@ export default class BasicFormView extends Component {
   render () {
     return (
       <Container>
-        <Progress percent={Store.progress} />
+        <ProgressBar percent={Store.progress} />
         <ContentWrapper>
           {this.renderCurrentTab()}
         </ContentWrapper>

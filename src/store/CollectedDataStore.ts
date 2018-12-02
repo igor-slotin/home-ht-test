@@ -54,7 +54,7 @@ const options = [
   }
 ]
 
-class CollectedDataStore {
+export class CollectedDataStore {
   @observable
   fullName: string = '';
 
@@ -115,13 +115,22 @@ class CollectedDataStore {
   @action
   submitData = async () => {
     this.isSubmited = true;
-    await Router.pushRoute('/result');
+    setTimeout(async () => {
+      await Router.pushRoute('/result');
+    }, 200)
   }
   
   @action
   handleParamChanged = (field: Tabs) => (event) => {
     const key = tabsMap[field].storeKey
     this[key] = event.target.value;
+  }
+
+  @action
+  resetStep = () => {
+    this.isLastStep = false;
+    this.isSubmited = false;
+    this.step = Tabs.fullName;
   }
 }
 

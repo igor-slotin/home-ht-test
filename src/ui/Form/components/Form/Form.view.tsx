@@ -1,22 +1,25 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 
-import Store from '../../../../store/CollectedDataStore'
+import { CollectedDataStore } from '../../../../store/CollectedDataStore'
+import { Button } from '../../../../commonComponents/Button';
 
 import { 
   Form,
-  Button
  } from './Form.style'
 
- @observer
-export default class FormView extends Component {
-  render() {
-    const { children } = this.props;
+ interface IProps {
+   store: CollectedDataStore
+ }
 
+ @observer
+export default class FormView extends Component<IProps> {
+  render() {
+    const { children, store } = this.props;
     return (
-      <Form onSubmit={Store.setNextTab} action="javascript:void(0);">
+      <Form onSubmit={store.setNextTab} action="javascript:void(0);">
         {children}
-        <Button type="submit">{Store.isLastStep ? 'Submit params': 'Next step'}</Button>
+        <Button type="submit">{store.isLastStep ? 'Submit params': 'Next step'}</Button>
       </Form>)
   }
 }
