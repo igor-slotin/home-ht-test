@@ -20,7 +20,7 @@ class ResultUIStore {
         fullName: DataStore.fullName,
         email: DataStore.email,
         phoneNumber: DataStore.phoneNumber,
-        selectedCost: find(DataStore.costOptions, {key: DataStore.selectedCost})
+        selectedSalary: find(DataStore.salaryOptions, {key: DataStore.selectedSalary})
       }
     }
     return {};

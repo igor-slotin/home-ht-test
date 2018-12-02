@@ -30,7 +30,7 @@ export default class ResultsView extends Component {
             <ListItem>Full name: {UIStore.collectedInfo.fullName}</ListItem>
             <ListItem>Email: {UIStore.collectedInfo.email}</ListItem>
             <ListItem>Phone number: {UIStore.collectedInfo.phoneNumber}</ListItem>
-            <ListItem>Cost: {UIStore.collectedInfo.selectedCost.value}</ListItem>
+            <ListItem>Salary: {UIStore.collectedInfo.selectedSalary.value}</ListItem>
           </ul>
         )}
       </div>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for home-ht-challenge /src/ui/Form/components/Form/Form.view.tsx</title>
+    <title>Code coverage report for home-ht-challenge /src/ui/Form/tabs/Salary/Salary.view.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../../../base.css" />
@@ -16,32 +16,32 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../../../../index.html">All files</a> / <a href="index.html">home-ht-challenge /src/ui/Form/components/Form</a> Form.view.tsx
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">home-ht-challenge /src/ui/Form/tabs/Salary</a> Salary.view.tsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/2</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -67,7 +67,16 @@
 22
 23
 24
-25</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -83,37 +92,55 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
-import { observer } from 'mobx-react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { observer } from 'mobx-react'
+import { RadioGroup, RadioButton } from 'react-radio-buttons';
 &nbsp;
-import { CollectedDataStore } from '../../../../store/CollectedDataStore'
-import { Button } from '../../../../commonComponents/Button';
-&nbsp;
+import Label from '../../components/Label';
+import Form from '../../components/Form'
+import Store, { Tabs } from '../../../../store/CollectedDataStore';
 import { 
-  Form,
- } from './Form.style'
+  Group, 
+  Container,
+  Button
+} from './Salary.style'
 &nbsp;
- interface IProps {
-   store: CollectedDataStore
- }
-&nbsp;
- @observer
-export default class FormView extends Component&lt;IProps&gt; {
-  render() {
-    const { children, store } = this.props;
-    return (
-      &lt;Form onSubmit={store.setNextTab} action="javascript:void(0);"&gt;
-        {children}
-        &lt;Button type="submit"&gt;{store.isLastStep ? 'Submit params': 'Next step'}&lt;/Button&gt;
-      &lt;/Form&gt;)
+@observer
+export default class SalaryView extends Component {
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;Form&gt;
+        &lt;Container&gt;
+          &lt;Label&gt;
+              Choose Salary
+          &lt;/Label&gt;
+          &lt;Group onChange={ Store.setSelectedSalary } value={Store.selectedSalary}&gt;
+            {Store.salaryOptions.map(<span class="fstat-no" title="function not covered" >it</span>em =&gt; (
+<span class="cstat-no" title="statement not covered" >              &lt;Button key={item.key} value={item.key}&gt;</span>
+                {item.value}
+            &lt;/Button&gt;
+            ))}
+          &lt;/Group&gt;
+        &lt;/Container&gt;
+      &lt;/Form&gt;
+    )
   }
 }</pre></td></tr>
 </table></pre>

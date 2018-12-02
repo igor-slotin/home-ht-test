@@ -2,14 +2,14 @@ import { observable, computed, action } from 'mobx'
 import FullNameTab from '../ui/Form/tabs/FullName';
 import EmailTab from '../ui/Form/tabs/Email';
 import PhoneNumberTab from '../ui/Form/tabs/PhoneNumber';
-import CostView from '../ui/Form/tabs/Cost';
+import SalaryView from '../ui/Form/tabs/Salary';
 import { Router } from '../../routes'
 
 export enum Tabs {
   fullName = 0,
   email = 1,
   phoneNumber = 2,
-  cost = 3
+  salary = 3
 }
 
 const tabsMap = {
@@ -28,10 +28,10 @@ const tabsMap = {
     stepNumber: 2,
     storeKey: 'phoneNumber'
   },
-  [Tabs.cost]: {
-    component: CostView,
+  [Tabs.salary]: {
+    component: SalaryView,
     stepNumber: 3,
-    storeKey: 'cost'
+    storeKey: 'salary'
   }
 }
 
@@ -65,10 +65,10 @@ export class CollectedDataStore {
   phoneNumber: string = ''
 
   @observable
-  costOptions = options;
+  salaryOptions = options;
 
   @observable
-  selectedCost = '0'
+  selectedSalary = '0'
 
   @observable
   step: Tabs = Tabs.fullName;
@@ -108,8 +108,8 @@ export class CollectedDataStore {
   }
 
   @action
-  setSelectedCost = (cost) => {
-    this.selectedCost = cost;
+  setSelectedSalary = (salary) => {
+    this.selectedSalary = salary;
   }
 
   @action

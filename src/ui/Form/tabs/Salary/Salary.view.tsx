@@ -9,19 +9,19 @@ import {
   Group, 
   Container,
   Button
-} from './Cost.style'
+} from './Salary.style'
 
 @observer
-export default class Email extends Component {
+export default class SalaryView extends Component {
   render() {
     return (
       <Form>
         <Container>
           <Label>
-              Choose Cost
+              Choose Salary
           </Label>
-          <Group onChange={ Store.setSelectedCost } value={Store.selectedCost}>
-            {Store.costOptions.map(item => (
+          <Group onChange={ Store.setSelectedSalary } value={Store.selectedSalary}>
+            {Store.salaryOptions.map(item => (
               <Button key={item.key} value={item.key}>
                 {item.value}
             </Button>

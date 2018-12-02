@@ -44,7 +44,6 @@ export const Button = styled.button`
         height: 2rem;
         font-size: 1rem;
         padding: 1rem;
-        max-width: 80%;
         margin: 0 auto;
      }
 `;

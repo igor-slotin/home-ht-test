@@ -86,7 +86,6 @@ exports[`Form test Should match snapshot 1`] = `
     height: 2rem;
     font-size: 1rem;
     padding: 1rem;
-    max-width: 80%;
     margin: 0 auto;
   }
 }
